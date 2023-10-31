@@ -11,7 +11,7 @@
     <a href="#title" class="skip-to-content">Skip to main content</a>
 
     <header role="banner">
-      <img src="img/banner2.png" alt="Banner of the virtual home website" />
+      <img src="img/banner.jpg" alt="Banner of the virtual home website" />
     </header>
 
     <nav aria-label="Virtual Home">
@@ -19,50 +19,64 @@
         <li role="none">
           <a role="menuitem" href="index.html" tabindex="0">Home</a>
         </li>
-        <li role="none">
-          <a role="menuitem" href="#about-us" tabindex="0">About Us</a>
-        </li>
-        <li role="none">
-          <a role="menuitem" href="#contact-us" tabindex="0">Contact us</a>
+        <li class="dropdown" role="none">
+          <a
+            role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+            href="#journey"
+            tabindex="0"
+            >Journey
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="down"
+              width="12"
+              height="12"
+              viewBox="0 0 12 9"
+            >
+              <polygon points="1 0, 11 0, 6 8"></polygon>
+            </svg>
+          </a>
+          <ul role="menu" aria-label="More">
+            <li role="none">
+              <a role="menuitem" href="#the-process" tabindex="0"
+                >The process</a
+              >
+            </li>
+          </ul>
         </li>
         <li class="dropdown" role="none">
           <a
             role="menuitem"
             aria-haspopup="true"
             aria-expanded="false"
-            href="#more"
+            href="#about-us"
             tabindex="0"
-            >More</a
-          >
-          <ul role="menu" aria-label="More">
+            >About us
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="down"
+              width="12"
+              height="12"
+              viewBox="0 0 12 9"
+            >
+              <polygon points="1 0, 11 0, 6 8"></polygon>
+            </svg>
+          </a>
+          <ul role="menu" aria-label="About">
             <li role="none">
-              <a role="menuitem" href="#help" tabindex="0">Help</a>
+              <a role="menuitem" href="#our-story" tabindex="0">Our story</a>
             </li>
-            <li role="none" onblur="closeDropdown()">
-              <a role="menuitem" href="#write-us" tabindex="0">Write Us</a>
+            <li role="none">
+              <a role="menuitem" href="#our-people" tabindex="0">Our people</a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="#media" tabindex="0">Media</a>
             </li>
           </ul>
         </li>
         <li role="none">
-          <a role="menuitem" href="#contact-us" tabindex="0">Contact us</a>
-        </li>
-        <li class="dropdown" role="none">
-          <a
-            role="menuitem"
-            aria-haspopup="true"
-            aria-expanded="false"
-            href="#more"
-            tabindex="0"
-            >More</a
-          >
-          <ul role="menu" aria-label="More">
-            <li role="none">
-              <a role="menuitem" href="#help" tabindex="0">Help</a>
-            </li>
-            <li role="none" onblur="closeDropdown()">
-              <a role="menuitem" href="#write-us" tabindex="0">Write Us</a>
-            </li>
-          </ul>
+          <a role="menuitem" href="contact-us.html" tabindex="0">Contact us</a>
         </li>
       </ul>
     </nav>

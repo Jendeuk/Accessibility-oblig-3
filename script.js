@@ -1,14 +1,14 @@
 function togglePopupMenu(event) {
   const popupMenu = event.target.nextElementSibling;
   const attr = event.target.getAttribute("aria-expanded");
-  console.log(attr);
   event.target.setAttribute(
     "aria-expanded",
     attr === "true" ? "false" : "true"
   );
-  popupMenu.style.display = attr !== "true" ? "block" : "none";
+  popupMenu.style.display = attr !== "true" ? "flex" : "none";
+  event.target.querySelector("svg").style.transform =
+    attr !== "true" ? "scaleY(-1)" : "scaleY(1)";
 }
-const popups = document.querySelectorAll("*[aria-expanded]");
-popups.forEach((popup) => {
+document.querySelectorAll("*[aria-expanded]").forEach((popup) => {
   popup.addEventListener("click", togglePopupMenu, false);
 });
