@@ -1,3 +1,4 @@
+//Menubar toggle
 function togglePopupMenu(event) {
   const popupMenu = event.target.nextElementSibling;
   const attr = event.target.getAttribute("aria-expanded");

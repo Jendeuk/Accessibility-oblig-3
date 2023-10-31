@@ -129,10 +129,11 @@ figcaption {
   margin-top: 10px;
 }
 
-/* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
 main > section {
   margin: 35px 0;
 }
+
+/* Table */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -147,6 +148,8 @@ th {
 th {
   background-color: #ddd;
 }
+
+/* Form */
 form {
   margin-bottom: 35px;
 }
