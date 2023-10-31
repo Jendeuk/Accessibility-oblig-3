@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Welcome to my virtual home</title>
+  </head>
+  <body>
+    <a href="#title" class="skip-to-content">Skip to main content</a>
+
+    <header role="banner">
+      <img src="img/banner2.png" alt="Banner of the virtual home website" />
+    </header>
+
+    <nav aria-label="Virtual Home">
+      <ul role="menubar" aria-label="Virtual Home">
+        <li role="none">
+          <a role="menuitem" href="index.html" tabindex="0">Home</a>
+        </li>
+        <li role="none">
+          <a role="menuitem" href="#about-us" tabindex="0">About Us</a>
+        </li>
+        <li role="none">
+          <a role="menuitem" href="#contact-us" tabindex="0">Contact us</a>
+        </li>
+        <li class="dropdown" role="none">
+          <a
+            role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+            href="#more"
+            tabindex="0"
+            >More</a
+          >
+          <ul role="menu" aria-label="More">
+            <li role="none">
+              <a role="menuitem" href="#help" tabindex="0">Help</a>
+            </li>
+            <li role="none" onblur="closeDropdown()">
+              <a role="menuitem" href="#write-us" tabindex="0">Write Us</a>
+            </li>
+          </ul>
+        </li>
+        <li role="none">
+          <a role="menuitem" href="#contact-us" tabindex="0">Contact us</a>
+        </li>
+        <li class="dropdown" role="none">
+          <a
+            role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+            href="#more"
+            tabindex="0"
+            >More</a
+          >
+          <ul role="menu" aria-label="More">
+            <li role="none">
+              <a role="menuitem" href="#help" tabindex="0">Help</a>
+            </li>
+            <li role="none" onblur="closeDropdown()">
+              <a role="menuitem" href="#write-us" tabindex="0">Write Us</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <section>
+        <h1 id="title">Title</h1>
+        <h2>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum
+          facilis soluta repudiandae inventore maiores odit dolore et impedit
+          aspernatur? In?
+        </h2>
+      </section>
+
+      <table
+        summary="A list of hockey teams, with their state, city and mascot"
+      >
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Title</th>
+          <th scope="col">Title</th>
+          <th scope="col">Title</th>
+        </tr>
+        <tr>
+          <td>Text</td>
+          <td>Text</td>
+          <td>Text</td>
+          <td>Text</td>
+        </tr>
+        <tr>
+          <td>Text</td>
+          <td>Text</td>
+          <td>Text</td>
+          <td>Text</td>
+        </tr>
+        <tr>
+          <td>Text</td>
+          <td>Text</td>
+          <td>Text</td>
+          <td>Text</td>
+        </tr>
+      </table>
+
+      <section>
+        <h1>Title</h1>
+        <h2>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia fuga
+          repellat molestiae magnam, eligendi adipisci?
+        </h2>
+      </section>
+
+      <form>
+        <div>
+          <div>
+            <label for="firstname">First name</label>
+            <span id="firstnameDesc"></span>
+            <input
+              type="text"
+              name="firstname"
+              id="firstname"
+              required
+              aria-required="true"
+              aria-describedby="firstnameDesc"
+            />
+          </div>
+          <div>
+            <label for="lastname">Last name</label>
+            <span id="lastnameDesc"></span>
+            <input
+              type="text"
+              name="lastname"
+              id="lastname"
+              required
+              aria-required="true"
+              aria-describedby="lastnameDesc"
+            />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <span id="emailDesc"></span>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              aria-required="true"
+              aria-describedby="emailDesc"
+            />
+          </div>
+          <div>
+            <label for="mobile">Mobile</label>
+            <span id="mobileDesc"></span>
+            <input
+              type="tel"
+              name="mobile"
+              id="mobile"
+              required
+              aria-required="true"
+              aria-describedby="mobileDesc"
+            />
+          </div>
+        </div>
+        <button type="submit">Send form</button>
+      </form>
+    </main>
+
+    <footer>
+      <p aria-hidden="false">This is my seconds attempt</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      document
+        .querySelector("form")
+        .addEventListener("submit", function (event) {
+          function updateFeedback(el, type, msg) {
+            el.parentNode.className = type;
+            el.parentNode.querySelector("span").innerHTML = msg;
+          }
+          const firstname = document.querySelector("#firstname");
+          const lastname = document.querySelector("#lastname");
+          const email = document.querySelector("#email");
+          const mobile = document.querySelector("#mobile");
+
+          if (firstname.value[0] !== firstname.value[0].toUpperCase())
+            updateFeedback(
+              firstname,
+              "error",
+              "First name must start with a capital letter"
+            );
+          else updateFeedback(firstname, "success", "✔");
+
+          if (lastname.value[0] !== lastname.value[0].toUpperCase())
+            updateFeedback(
+              lastname,
+              "error",
+              "Last name must start with a capital letter"
+            );
+          else updateFeedback(lastname, "success", "✔");
+
+          if (!email.value.endsWith("@stud.ntnu.no"))
+            updateFeedback(email, "error", "Email domain must be stud.ntnu.no");
+          else updateFeedback(email, "success", "✔");
+
+          if (mobile.value.length !== 8)
+            updateFeedback(
+              mobile,
+              "error",
+              "Mobile number must be in the format 12345678"
+            );
+          else updateFeedback(mobile, "success", "✔");
+
+          event.preventDefault();
+          return false;
+        });
+    </script>
+  </body>
+</html>

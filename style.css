@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  background-color: #f1e9df;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+header > img {
+  background-color: cadetblue;
+  margin-bottom: 35px;
+  font-weight: bold;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  position: relative;
+}
+
+.skip-to-content {
+  background-color: rgb(46, 46, 46);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  position: absolute;
+  transform: translateY(-120%);
+}
+
+.skip-to-content:focus {
+  transform: translateY(0);
+}
+
+nav {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 2rem;
+}
+nav > ul {
+  display: flex;
+  justify-content: space-between;
+}
+nav ul li {
+  position: relative;
+  background-color: rgb(183, 224, 120);
+  color: black;
+  padding: 5px 10px;
+  text-decoration: none;
+  list-style: none;
+  font-size: 20px;
+}
+a[aria-expanded] + ul {
+  display: none;
+  position: absolute;
+  background-color: cornsilk;
+  left: 0;
+  list-style: none;
+}
+
+.main-image {
+  height: 300px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.images-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Style for the images */
+figure img {
+  max-width: 100%;
+  height: 50%;
+}
+
+/* Style for the captions (figcaption) */
+figcaption {
+  margin-top: 10px;
+}
+
+/* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+td,
+th {
+  background-color: white;
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+form > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+form > div div {
+  display: flex;
+  flex-direction: column;
+}
+form button {
+}
+
+form .success span {
+  color: green;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+form .error span {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Welcome to my virtual home</title>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <header role="banner">
+      <img src="img/banner2.png" alt="Banner of the virtual home website" />
+    </header>
+
+    <nav aria-label="Virtual Home">
+      <ul role="menubar" aria-label="Virtual Home">
+        <li role="none">
+          <a role="menuitem" href="#home" tabindex="0">Home</a>
+        </li>
+        <li role="none">
+          <a role="menuitem" href="#about-us" tabindex="0">About Us</a>
+        </li>
+        <li role="none">
+          <a role="menuitem" href="#contact-us" tabindex="0">Contact us</a>
+        </li>
+        <li class="dropdown" role="none">
+          <a
+            role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+            href="#more"
+            tabindex="0"
+            >More</a
+          >
+          <ul role="menu" aria-label="More">
+            <li role="none">
+              <a role="menuitem" href="#help" tabindex="0">Help</a>
+            </li>
+            <li role="none" onblur="closeDropdown()">
+              <a role="menuitem" href="#write-us" tabindex="0">Write Us</a>
+            </li>
+          </ul>
+        </li>
+        <li role="none">
+          <a role="menuitem" href="contact-us.html" tabindex="0">Contact us</a>
+        </li>
+        <li class="dropdown" role="none">
+          <a
+            role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+            href="#more"
+            tabindex="0"
+            >More</a
+          >
+          <ul role="menu" aria-label="More">
+            <li role="none">
+              <a role="menuitem" href="#help" tabindex="0">Help</a>
+            </li>
+            <li role="none" onblur="closeDropdown()">
+              <a role="menuitem" href="#write-us" tabindex="0">Write Us</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <img
+        src="img/virtualhome.png"
+        alt="A guy who is typing on a keyboard"
+        class="main-image"
+      />
+
+      <article class="images-wrapper">
+        <figure>
+          <img src="img/cozylivingroom.png" alt="Eye Icon" />
+          <figcaption>
+            <h1>Cozy Living Room</h1>
+            <h2>
+              Welcome to the heart of our home, the living room. Discover
+              comfort, style, and relaxation in this inviting space.
+            </h2>
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="img/modernkitchen.png" alt="Accessibility Icon" />
+          <figcaption>
+            <h1>Modern Kitchen</h1>
+            <h2>
+              Step into our modern kitchen, where culinary delights and family
+              gatherings come to life. Explore the perfect blend of design and
+              functionality
+            </h2>
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="img/serenebedroom.png" alt="Hand Button Icon" />
+          <figcaption>
+            <h1>Serene Bedroom</h1>
+            <h2>
+              Find serenity in our peaceful bedroom retreat. Unwind, recharge,
+              and ultimate in comfort and relaxation.
+            </h2>
+          </figcaption>
+        </figure>
+      </article>
+    </main>
+
+    <footer>
+      <p aria-hidden="false">This is my first attempt</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
